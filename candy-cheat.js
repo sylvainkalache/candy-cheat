@@ -31,13 +31,13 @@ for (var y = 0; y <= 8; y++) {
 
 	//Generate base64
 	options.resultCanvas;
-	var canvas = options.resultCanvas.toDataURL('image/jpeg')
-	//document.body.appendChild(Pixastic.process(img, "crop", options))
+	var canvas = options.resultCanvas.toDataURL('image/jpeg');
+	//document.body.appendChild(Pixastic.process(img, "crop", options));
 
-
+	var to_render = new Array();
 	resemble(canvas).compareTo(green).ignoreColors().onComplete(function(data) {
 	    if (data['misMatchPercentage']>10) {
-		document.body.appendChild(Pixastic.process(img, "crop", options))
+		document.body.appendChild(Pixastic.process(img, "crop", options));
 		console.log(data['misMatchPercentage']);
 	    }
 	});
