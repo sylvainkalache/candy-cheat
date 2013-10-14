@@ -35,13 +35,16 @@ for (var y = 0; y <= 8; y++) {
 	//document.body.appendChild(Pixastic.process(img, "crop", options));
 
 	var to_render = new Array();
-	resemble(canvas).compareTo(green).ignoreColors().onComplete(
-	    function(data) {
-		if (data['misMatchPercentage']>10) {
-		    //document.body.appendChild(Pixastic.process(img, "crop", options));
-		    $("body").append(Pixastic.process(img, "crop", options));
-		    console.log(data['misMatchPercentage']);
-		}
-	    });
+
+	var diff = resemble(canvas).compareTo(green).onComplete(function(data){
+	    console.log(data['misMatchPercentage'])
+	    return data;
+	});
+
+	if (diff['misMatchPercentage']>10) {
+	    console.log('Hello');
+	    console.log(diff['misMatchPercentage']);
+	    $("body").append(Pixastic.process(img, "crop", options));
+	}
     }
 }
