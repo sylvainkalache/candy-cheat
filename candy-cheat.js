@@ -35,11 +35,13 @@ for (var y = 0; y <= 8; y++) {
 	//document.body.appendChild(Pixastic.process(img, "crop", options));
 
 	var to_render = new Array();
-	resemble(canvas).compareTo(green).ignoreColors().onComplete(function(data) {
-	    if (data['misMatchPercentage']>10) {
-		document.body.appendChild(Pixastic.process(img, "crop", options));
-		console.log(data['misMatchPercentage']);
-	    }
-	});
+	resemble(canvas).compareTo(green).ignoreColors().onComplete(
+	    function(data) {
+		if (data['misMatchPercentage']>10) {
+		    //document.body.appendChild(Pixastic.process(img, "crop", options));
+		    $("body").append(Pixastic.process(img, "crop", options));
+		    console.log(data['misMatchPercentage']);
+		}
+	    });
     }
 }
