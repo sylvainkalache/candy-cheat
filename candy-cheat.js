@@ -1,6 +1,5 @@
 // Grid total
 //{ left : 10, top : 200, width : 620, height : 670 }};
-
 var blue = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAAZABkDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDS+E/7PvjP4kQS3mk20dvbJ0nnPy/mK/rLP+M8Dk01Tr6vsj+dsHlFXMIudPYy/FPgu88Ha3JoF9Okk9v95kwQ1dWAzOOZ0VXo6Jnk16MKc3T6ozTZO/UcfSup1YQZzPzE/s5f7gq/avuQdp4N+OHjjQvCMHg3Sp0h00jEkQiETH/topDj8Gr5rM+D8Hi8U8XV1n6v8tj6aGZ1cDSdKnszKc3Oo3DahcwsC/3t8hcn8SSa76VOGGgqVPofPzk6k3ORbt9IE00Fv93zv4v7tYYiteDqLoRBe0qcqPSP+FCW/wD0P2j/APff/wBavk/9bZf8+pfh/me3/ZjPGtKk8C3lpDF53hq3mVdpcS30U8r/AO0HjlRfwAr7ess1pzk3zyT/AMFl+Kf3tnPJu2pPDf6lG2YLUSp6bs1pKjF/Gzimr62L41HWCcnThn2asJ4fDuLjfQxjL2cuaO50f/CYeL/+hf0b/wAGL/8Ax6vnf7CwHeX3f/anf/aeI7nznqf+rf8A6+K/VKnwnoz3PVfC3/HvXzWO3OCe50615TOVklIZ/9k="
 
 var green = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAAZABkDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD6Euv2u9b1KzMNz4WhRyMZMmR/Kv50zLivFY2nyVLP5H5dieIq9WHI7fcebaj4oGuXMmpXFqsJl+8F4z+Ar86xEXOpdHxeKlKrK7IBqluYtxIz61MoS2RNVRS90i/t+L/niaPYz7nNqefxXJZPLjPH519JKjHdnpeynfUt22oXCDClse/NYSpUnuWqZLHqu1dsgJHpWLw+tzKpQcdWRf2k3/PD/wAeNX7KJnynM216U+7MPyFetOg3uj2vZtmjBq0n9xa5JYUXsiNtRjbqa3dNPciUHLcg/tA/3j+dL2MTP6sjAgr2ZbHqFu36fjXLMGLWRzDaoo//2Q=="
@@ -13,28 +12,64 @@ var red = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgI
 
 var yellow = "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAAZABkDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD68urlpZ10+1+SLOW29P8A630r/OeSTbqzd2z9koYenRp3aOrs4fIs4kYcN1rxanvT5jxqkuabsVdRb7KTcKN2eveuqjCNV+zRtRXtFysd/a2lf9BF/wDvs1p9SkY/VJ9jldJimlukQctJ9/3r0vYPENU6e57eKlGMD0S+tPsa29vIcu0e4+xrLN8reUxjGW7PlqNf2kpNbXMjUITJa7V7V49KbhO6PSoy5ZnKfYn9P0Fep7RHraD/AA1eKt6s8hzt6e1dftpYWXtIjzGg+Wx2EmqPeyNO8m6Rl2E4HSuLMMdVzKqpV9j55YT2StFaEkUK3CSqZQAvQVxUafNqEqjhNGLttf7o/M113PR9pLucno3RvrXdifhPfzDY6vTev4152K+BHhVti6P+W9ThfgPIrfxEZVaHef/Z"
 
+// blue = 0
+// green = 1
+// orange = 2
+// purple = 3
+// red = 4
+// yellow = 5
+
 var img = new Image();
 img.src = "file.jpg";
 
 img.onload = function() {
-    var start = Date.now();
-    for (var y = 0; y <= 8; y++) {
-	for (var i = 0; i <= 8; i++) {
 
-            var options = { left : 32+(68*y), top : 222+(72*i), width : 25, height : 25 };
-	    console.log(options)
-            Pixastic.process(img, "crop", options, function(processed_image) {
-		var canvas = processed_image.toDataURL('image/jpeg');
-		//$("body").append("<img src='"+canvas+"'>");
+    function create_array(array_size) {
+	var combinations = new Array([]);
+	for (var y = 0; y <= 10; y++) {
+	    combinations[y] = new Array();
+	}
+	console.log('created array: '+y);
+	test(combinations);
+    }
 
-		resemble(canvas).compareTo(green).onComplete(function(data){
-		    //console.log(data['misMatchPercentage']);
-                    if (data['misMatchPercentage']<99) {
-			$("body").append("<img src='"+canvas+"'>");
-                    }
+    function find_color(combinations, y, i) {
+	var options = { left : 32+(68*y), top : 222+(72*i), width : 25, height : 25 };
+	Pixastic.process(img, "crop", options, function(processed_image) {
+
+	    var canvas = processed_image.toDataURL('image/jpeg');
+	    var colors = ['blue', 'green', 'orange', 'purple', 'red', 'yellow'];
+	    var result = false;
+
+	    for (z = 0; z < colors.length; z++) {
+		is_color(canvas, colors[z], function() {
+		    console.log('y: '+y+' i: '+i+' :'+z);
+		    combinations[y].push(z);
+		    result = true;
 		});
-	    });
+		if(result) {
+		    break;
+		}
+	    }
+	});
+    }
+
+    function is_color(canvas, color_name, callback) {
+	resemble(canvas).compareTo(eval(color_name)).onComplete(function(data) {
+	    if (data['misMatchPercentage']<98) {
+		console.log(color_name);
+		callback();
+	    }
+	});
+    }
+
+    function test(combinations) {
+	for (var y = 0; y <= 10; y++) {
+	    for (var i = 0; i <= 10; i++) {
+		find_color(combinations, y, i);
+	    }
 	}
     }
-}
 
+    create_array(9);
+}
