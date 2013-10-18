@@ -42,26 +42,24 @@ img.onload = function() {
 	    var result = false;
 
 	    for (z = 0; z < colors.length; z++) {
-		is_color(canvas, colors[z], function() {
-		    console.log('y: '+y+' i: '+i+' :'+z);
-		    combinations[y].push(z);
-		    result = true;
+		result =  is_color(canvas, colors, y, i, z, combinations, function(result) {
+		    combinations = result;
 		});
-		if(result) {
-		    break;
-		}
 	    }
 	});
+	return = combinations;
     }
 
-    function is_color(canvas, color_name, callback) {
-	resemble(canvas).compareTo(eval(color_name)).onComplete(function(data) {
+    function is_color(canvas, colors, y, i, z, combinations, callback) {
+	return resemble(canvas).compareTo(eval(colors[z])).onComplete(function(data) {
 	    if (data['misMatchPercentage']<98) {
-		console.log(color_name);
-		callback();
+		combinations[y][i] = z;
+		callback(combinations);
+	    } else {
+		callback(false);
 	    }
 	});
-    }
+    };
 
     function test(combinations) {
 	for (var y = 0; y <= 10; y++) {
